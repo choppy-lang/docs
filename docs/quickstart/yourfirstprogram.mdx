@@ -1,0 +1,134 @@
+---
+sidebar_label: Your First Program
+sidebar_position: 2
+---
+
+import CodeBlock from '@theme/CodeBlock'
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import Link from '@docusaurus/Link';
+
+# Your First Program
+
+Now that Choppy is installed on your computer, let&apos;s start writing our first program.
+We&apos;re going to build a program that adds and subtracts two numbers.
+
+## 1. Initializing our project
+
+First, open the terminal for your operating system and type in the following command:
+
+<Tabs>
+	<TabItem value="cmd" label="cmd.exe" default>
+		<CodeBlock
+			language="bash">
+			{`> cd %userprofile%/Documents
+> chp init my-app`}
+		</CodeBlock>
+	</TabItem>
+	<TabItem value="pwsh" label="Powershell">
+		<CodeBlock
+			language="powershell">
+			{`> Set-Location ~/Documents
+> chp init my-app`}
+		</CodeBlock>
+	</TabItem>
+	<TabItem value="bash" label="Bash">
+		<CodeBlock
+			language="bash">
+			{`> cd ~
+> chp init my-app`}
+		</CodeBlock>
+	</TabItem>
+</Tabs>
+
+## 2. Writing the code
+
+Your project structure should look like this:
+
+```bash
+my-app
+-- src
+   -- main.chp # Entry point of our application
+-- choppyfile.cob # Project file
+```
+
+Let&apos;s open our `src/main.chp` file. You can delete the boilerplate code.
+
+<CodeBlock
+	language="choppy"
+	title="src/main.chp"
+	showLineNumbers>
+	{`print("Hello world!");`}
+</CodeBlock>
+
+First, let&apos;s define two variables that we&apos;ll be adding/subtracting.
+
+<CodeBlock
+	language="choppy"
+	title="src/main.chp"
+	showLineNumbers>
+	{`let a = 5;
+let b = 6;`}
+</CodeBlock>
+
+:::tip
+
+Use `const` instead of `let` to define **constant**, or **unchangable** variables.
+<CodeBlock
+	language="choppy"
+	title="src/main.chp"
+	showLineNumbers>
+	{`const a = 5;
+const b = 6`}
+</CodeBlock>
+
+:::
+
+After that, we can write our addition function. It will accept two parameters: the two
+numbers we&apos;re adding, of course!
+
+<CodeBlock
+	language="choppy"
+	title="src/main.chp"
+	showLineNumbers>
+	{`let a = 5;
+let b = 6;\n
+function add(num1, num2) {
+    return num1 + num2;
+}\n
+print(add(a, b));`}
+</CodeBlock>
+
+Now, we&apos;re ready to run our code!
+
+Back in the terminal, type the following line:
+
+<Tabs>
+	<TabItem value="cmd" label="cmd.exe" default>
+		<CodeBlock
+			language="bash">
+			{`> chop src/main.chp`}
+		</CodeBlock>
+	</TabItem>
+	<TabItem value="pwsh" label="Powershell">
+		<CodeBlock
+			language="powershell">
+			{`> chop src/main.chp`}
+		</CodeBlock>
+	</TabItem>
+	<TabItem value="bash" label="Bash">
+		<CodeBlock
+			language="bash">
+			{`> chop src/main.chp`}
+		</CodeBlock>
+	</TabItem>
+</Tabs>
+
+You should have received the following:
+
+```
+11
+```
+
+Congrats! You just wrote your first program in Choppy. To learn more about the
+language, read the <Link href="/docs/guide">guide</Link>.

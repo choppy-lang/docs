@@ -2,7 +2,7 @@
 // Note: type annotations allow type checking and IDEs autocompletion
 
 const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const darkCodeTheme = require('./src/prism/themes/onedark');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -12,7 +12,7 @@ const config = {
 	baseUrl: '/',
 	onBrokenLinks: 'throw',
 	onBrokenMarkdownLinks: 'warn',
-	favicon: 'img/favicon.ico',
+	favicon: 'img/Choppy_V1.ico',
 
 	// GitHub pages deployment config.
 	// If you aren't using GitHub pages, you don't need these.
@@ -65,16 +65,20 @@ const config = {
 				title: 'Choppy',
 				logo: {
 					alt: 'Choppy Logo',
-					src: 'img/logo.svg',
+					src: 'img/Choppy_V1.svg',
 				},
 				items: [
 					{
 						type: 'doc',
 						docId: 'intro',
 						position: 'left',
-						label: 'Tutorial',
+						label: 'Documentation',
 					},
 					{ to: '/blog', label: 'Blog', position: 'left' },
+					{
+						type: 'docsVersionDropdown',
+						position: 'right',
+					},
 					{
 						href: 'https://github.com/ryloriz/choppy-lang',
 						label: 'GitHub',
@@ -128,6 +132,7 @@ const config = {
 				copyright: `Copyright © ${new Date().getFullYear()} Choppy, Inc. Built with Docusaurus.`,
 			},
 			prism: {
+				additionalLanguages: ['powershell'],
 				theme: lightCodeTheme,
 				darkTheme: darkCodeTheme,
 			},

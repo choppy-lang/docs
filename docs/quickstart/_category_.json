@@ -1,0 +1,8 @@
+{
+	"label": "Quickstart",
+	"position": 2,
+	"link": {
+		"type": "generated-index",
+		"description": "This is a five-minute quickstart on getting Choppy set up on your machine."
+	}
+}

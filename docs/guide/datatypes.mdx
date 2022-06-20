@@ -1,0 +1,82 @@
+---
+sidebar_label: Datatypes
+sidebar_position: 1
+---
+
+# Datatypes
+
+The Choppy datatypes are:
+
+- Primitives:
+	- Numbers
+	- Strings
+	- Booleans
+	- Null
+	- Undefined
+- Complex:
+	- Arrays
+	- Dictionaries
+
+## Numbers
+
+A Choppy number is either a integer or a float. An integer is a whole number, and a float
+is a decimal.
+
+## Strings
+
+Strings can be literal or template strings. A literal string holds raw string data, like
+the following:
+
+<!-- The `js` Prism tag is used because the `choppy` one is incomplete -->
+```js
+"hello world"
+'welcome to earth!'
+```
+
+On the other hand, a template string can have interpolated values. For example:
+
+```js
+`My name is ${FIRST_NAME}`
+```
+
+Literal strings can be initialized with a single quote (`'`) or double quote (`"`), but template
+strings can only be initialized with a backtick (<code>`</code>).
+
+## Booleans
+
+A boolean can only be `true` or `false`. They are no different from any other boolean value.
+
+## Null
+
+`null` is a value to represent nothing. Seriously. That&apos;s it.
+
+## Undefined
+
+`undefined` is also a value to represent nothing. But how does it differ from `null`? `undefined`
+is used when a value is **missing**, like a nonexistant dictionary value, or a nonexistant parameter.
+
+## Array
+
+An array is a list of values, primitive and complex. Separated by commas, each value in the array is
+assigned a unique index based on it&apos;s position in the array.
+
+In Choppy, arrays are defined with **braces**.
+
+```js
+[0, "hello world", true, null, undefined]
+```
+
+## Dictionary
+
+A dictionary is a list of key-value pairs. Separated by commas, each key can be any primitive datatype,
+while each value can be any datatype.
+
+In Choppy, arrays are defined with **braces**.
+
+```js
+{
+	key1: "hello world",
+	true: false,
+	a: 60
+}
+```
